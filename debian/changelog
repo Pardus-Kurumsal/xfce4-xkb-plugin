@@ -1,0 +1,221 @@
+xfce4-xkb-plugin (1:0.8.1-1) unstable; urgency=medium
+
+  [ Unit 193 ]
+  * New upstream release.
+    - Drop patch no longer needed.
+  * Run wrap-and-sort.
+  * d/control:
+    - Update build-depends for GTK3 version.
+      + libgtk2.0-dev → libgtk-3-dev
+      + libwnck-dev → libwnck-3-dev
+      + libxfce4ui-1-dev → libxfce4ui-2-dev
+      + xfce4-panel-dev → libxfce4panel-2.0-dev
+    - Add build-depends on libxfce4util-dev and libxfconf-0-dev.
+    - Drop versioned build-dep on libxklavier-dev and libgarcon-1-0-dev
+    - Drop build-depends on libxml-parser-perl and dpkg-dev.
+    - Use https in Vcs-Browser field.
+    - Update homepage as listed in the plugin.
+    - Update Standards-Version to 4.1.2.
+  * d/rules: Use pkg-info.mk and DEB_SOURCE to remove 'la' files.
+  * d/p/debian/patches/missing_linker_x11.patch:
+    - Backport patch to work around a FTBFS by adding -lX11 to LDFLAGS.
+  * d/changelog:
+    - Remove trailing whitespace from old entries.
+
+  [ Yves-Alexis Perez ]
+  * debian/copyright:
+    - drop obsolete URL.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 17 Dec 2017 16:41:46 +0100
+
+xfce4-xkb-plugin (1:0.7.1-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 06 May 2015 23:12:22 +0200
+
+xfce4-xkb-plugin (1:0.7.1-1) experimental; urgency=low
+
+  [ Evgeni Golov ]
+  * Correct Vcs-* URLs to point to anonscm.debian.org
+
+  [ Jackson Doak ]
+  * New upstream release
+    - Fix crash in xkb_util_normalize_group_name                    LP: #978230
+  * debian/watch: Track all versions
+  * debian/patches/:
+    - Add 01-font-selection.patch. Closes: #576072 LP: #733563
+      + Makes the xkb plugin change font with the rest of the system
+
+  [ Yves-Alexis Perez ]
+  * debian/control:
+    - update standards version to 3.9.6.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 15 Mar 2015 22:20:17 +0100
+
+xfce4-xkb-plugin (1:0.5.6-1) unstable; urgency=low
+
+  * New upstream release.
+  * Use epoch to override previous version since it was a development release
+    not suitable for Xfce 4.10.                                 closes: #711728
+  * debian/control:
+    - update standards version to 3.9.4.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Thu, 20 Jun 2013 22:09:32 +0200
+
+xfce4-xkb-plugin (0.7.0-1) unstable; urgency=low
+
+  [ Lionel Le Folgoc ]
+  * debian/rules: enable all hardening flags.
+
+  [ Yves-Alexis Perez ]
+  * New upstream release.
+  * debian/control:
+    - add build-dep on libgarcon-1-0-dev.
+    - update standards version to 3.9.3.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 22 May 2013 22:20:28 +0200
+
+xfce4-xkb-plugin (0.5.4.3-1) unstable; urgency=low
+
+  [ Lionel Le Folgoc ]
+  * New upstream release.
+
+  [ Yves-Alexis Perez ]
+  * debian/control:
+    - bump debhelper build-dep to 9 now that it's in sid.
+
+ -- Lionel Le Folgoc <mrpouit@gmail.com>  Mon, 23 Jan 2012 17:08:19 +0100
+
+xfce4-xkb-plugin (0.5.4.2-1) unstable; urgency=low
+
+  [ Lionel Le Folgoc ]
+  * New upstream release.
+
+  [ Yves-Alexis Perez ]
+  * debian/rules:
+    - use hardening support from dh 9 and dpkg-dev 1.16.1.
+  * debian/control:
+    - update debhelper build-dep to 8.9.4 for hardening support.
+    - add build-dep on dpkg-dev 1.16.1 for hardening support.
+    - drop build-dep on hardening-includes.
+  * debian/compat bumped to 9.
+
+ -- Lionel Le Folgoc <mrpouit@gmail.com>  Mon, 24 Oct 2011 18:51:30 +0200
+
+xfce4-xkb-plugin (0.5.4.1-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Lionel Le Folgoc <mrpouit@gmail.com>  Sat, 18 Jun 2011 23:17:48 +0200
+
+xfce4-xkb-plugin (0.5.4.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/patches:
+    - 01_xklavier_4.0, 02_fix-various-segfaults and 03_xklavier_5.0 dropped,
+      included upstream.
+  * debian/control:
+    - switch libxfcegui4 build-dep to libxfce4ui now that the plugin has been
+      ported.
+    - update debhelper build-dep for overrides and drop cdbs.
+  * debian/rules:
+    - switch to dh7 tiny rules with overrides.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Fri, 06 May 2011 23:06:36 +0200
+
+xfce4-xkb-plugin (0.5.3.3-4) unstable; urgency=low
+
+  * debian/control:
+    - update standards version to 3.9.2.
+    - add build-dep on hardening-includes.
+    - remove Emanuele and Simon from uploaders, thanks to them.
+    - bump Xfce build-deps to 4.8.
+  * Switch to 3.0 (quilt) source format.
+  * debian/rules:
+    - pick {C,LD}FLAGS from dpkg-buildflags.
+    - add -O1, -z,defs and --as-needed to LDFLAGS.
+    - add hardening flags to {C,LD}FLAGS.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 20 Apr 2011 11:10:36 +0200
+
+xfce4-xkb-plugin (0.5.3.3-3) unstable; urgency=low
+
+  * debian/patches/03_xklavier_5.0.patch: port to the libxklavier 5.0 API.
+  * debian/control: bump libxklavier-dev b-dep to >= 5.0.
+
+ -- Lionel Le Folgoc <mrpouit@gmail.com>  Sat, 10 Apr 2010 17:39:18 +0100
+
+xfce4-xkb-plugin (0.5.3.3-2) unstable; urgency=low
+
+  [ Lionel Le Folgoc ]
+  * debian/patches/02_fix-various-segfaults.patch: fix segfaults in the
+    settings dialog, when adding/removing layouts and changing keys.
+                                                    closes: #557452, #567346
+
+  [ Yves-Alexis Perez ]
+  * debian/control:
+    - update standards version to 3.8.4.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 09 Feb 2010 21:51:02 +0100
+
+xfce4-xkb-plugin (0.5.3.3-1) unstable; urgency=low
+
+  [ Yves-Alexis Perez ]
+  * debian/control:
+    - move to xfce section.
+    - add Lionel to uploaders.
+
+  [ Lionel Le Folgoc ]
+  * New upstream release.
+
+ -- Lionel Le Folgoc <mrpouit@gmail.com>  Sat, 28 Nov 2009 00:37:42 +0100
+
+xfce4-xkb-plugin (0.5.3.2-2) unstable; urgency=low
+
+  [ Evgeni Golov ]
+  * Fix Vcs-* fields, they were missing 'trunk' in the path.
+
+  [ Yves-Alexis Perez ]
+  * debian/watch edited to track Xfce archive reorganisation.
+  * debian/control:
+    - bump standards version to 3.8.3.
+    - update debhelper build-dep to 7.
+  * debian/compat bumped to 7.
+
+  [Emilio Pozuelo Monfort]
+  * debian/control:
+    - Build depend on libxklavier >= 4.0.
+  * debian/rules:
+    - Include simple-patchsys.mk.
+  * debian/patches/01_xklavier_4.0.patch:
+    - Port to the libxklavier 4.0 API.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 21 Oct 2009 00:14:31 +0200
+
+xfce4-xkb-plugin (0.5.3.2-1) unstable; urgency=low
+
+  [ Simon Huggins ]
+  * debian/control: Move fake Homepage field to a real one now dpkg
+    supports it.
+  * Add Vcs-* headers to debian/control
+
+  [ Yves-Alexis Perez ]
+  * New upstream release.
+    - fix mispell in README file.                               closes: #445335
+    - now displays variant.                            closes: #496183, #434124
+  * debian/control:
+    - add myself to Uploaders:, remove Rudy Godoy and Martin Loschwitz.
+    - update standards version to 3.8.0.
+    - add build-dep on libxklavier12-dev, librsvg2-dev, libwnck-dev,
+      intltool.
+    - add dep on ${misc:Depends}.
+  * debian/copyright: update dates and copyright owners.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 22 Feb 2009 19:45:42 +0100
+
+xfce4-xkb-plugin (0.4.3-1) unstable; urgency=low
+
+  * Initial Release.                                            closes: #421975
+
+ -- Simon Huggins <huggie@earth.li>  Wed, 02 May 2007 17:56:54 +0100

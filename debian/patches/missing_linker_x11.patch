@@ -1,0 +1,38 @@
+From 0fcd3fd72ca4c3469549059948978307a7e58186 Mon Sep 17 00:00:00 2001
+From: Viktor Odintsev <ninetls@xfce.org>
+Date: Sun, 10 Sep 2017 02:58:11 +0300
+Subject: Add -lX11 to libxkb_la_LIBADD
+
+---
+ panel-plugin/Makefile.am | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/panel-plugin/Makefile.am b/panel-plugin/Makefile.am
+index 21c69ea..9f74c99 100644
+--- a/panel-plugin/Makefile.am
++++ b/panel-plugin/Makefile.am
+@@ -58,7 +58,8 @@ libxkb_la_LIBADD = \
+ 	$(LIBXKLAVIER_LIBS) \
+ 	$(LIBWNCK_LIBS) \
+ 	$(GARCON_LIBS) \
+-	$(LIBRSVG_LIBS)
++	$(LIBRSVG_LIBS) \
++	-lX11
+ 
+ #
+ # Desktop file
+--- xfce4-xkb-plugin-0.8.1.orig/panel-plugin/Makefile.in
++++ xfce4-xkb-plugin-0.8.1/panel-plugin/Makefile.in
+@@ -468,7 +468,8 @@ libxkb_la_LIBADD = \
+ 	$(LIBXKLAVIER_LIBS) \
+ 	$(LIBWNCK_LIBS) \
+ 	$(GARCON_LIBS) \
+-	$(LIBRSVG_LIBS)
++	$(LIBRSVG_LIBS) \
++	-lX11
+ 
+ 
+ #
+-- 
+cgit v1.1
+
