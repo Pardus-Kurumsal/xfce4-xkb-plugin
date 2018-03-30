@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# José Vieira <jvieira33@sapo.pt>, 2017
+# Nuno Miguel <nunis@netcabo.pt>, 2007
+# Nuno Miguel <nunomgue@gmail.com>, 2015,2017
+# Sérgio Marques <smarquespt@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce Panel Plugins\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-27 00:32+0200\n"
+"PO-Revision-Date: 2017-08-08 09:58+0000\n"
+"Last-Translator: José Vieira <jvieira33@sapo.pt>\n"
+"Language-Team: Portuguese (http://www.transifex.com/xfce/xfce-panel-plugins/language/pt/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../panel-plugin/xkb-dialog.c:76
+msgid "This option is not available for current layout style"
+msgstr "Esta opção não está disponível para o esquema actual"
+
+#: ../panel-plugin/xkb-dialog.c:105 ../panel-plugin/xkb.desktop.in.h:1
+msgid "Keyboard Layouts"
+msgstr "Esquemas de teclado"
+
+#: ../panel-plugin/xkb-dialog.c:121
+msgid "Appearance"
+msgstr "Aparência"
+
+#: ../panel-plugin/xkb-dialog.c:131
+msgid "Show layout as:"
+msgstr "Mostrar esquema como:"
+
+#: ../panel-plugin/xkb-dialog.c:137
+msgid "image"
+msgstr "imagem"
+
+#: ../panel-plugin/xkb-dialog.c:138
+msgid "text"
+msgstr "texto"
+
+#: ../panel-plugin/xkb-dialog.c:139
+msgid "system"
+msgstr "sistema"
+
+#: ../panel-plugin/xkb-dialog.c:145
+msgid "Layout name:"
+msgstr "Esquema do nome:"
+
+#: ../panel-plugin/xkb-dialog.c:151
+msgid "country"
+msgstr "país"
+
+#: ../panel-plugin/xkb-dialog.c:152
+msgid "language"
+msgstr "idioma"
+
+#: ../panel-plugin/xkb-dialog.c:158
+msgid "Widget size:"
+msgstr "Tamanho do módulo:"
+
+#: ../panel-plugin/xkb-dialog.c:171
+msgid "Caps Lock indicator:"
+msgstr "Indicador de caps lock:"
+
+#: ../panel-plugin/xkb-dialog.c:183
+msgid "Tooltip icon:"
+msgstr "Ícone de dica:"
+
+#: ../panel-plugin/xkb-dialog.c:195
+msgid "Behavior"
+msgstr "Comportamento"
+
+#: ../panel-plugin/xkb-dialog.c:205
+msgid "Manage layout:"
+msgstr "Gerir esquema:"
+
+#: ../panel-plugin/xkb-dialog.c:211
+msgid "globally"
+msgstr "globalmente"
+
+#: ../panel-plugin/xkb-dialog.c:212
+msgid "per window"
+msgstr "por janela"
+
+#: ../panel-plugin/xkb-dialog.c:213
+msgid "per application"
+msgstr "por aplicação"
+
+#: ../panel-plugin/xkb-dialog.c:290
+msgid "Keyboard Layouts Plugin"
+msgstr "\"Plug-in\" de esquema de teclado"
+
+#: ../panel-plugin/xkb-dialog.c:292
+msgid "Allows you to configure and use multiple keyboard layouts."
+msgstr "Permite-lhe configurar e utilizar diversos esquemas de teclado."
+
+#: ../panel-plugin/xkb-plugin.c:238
+msgid "Keyboard settings"
+msgstr "Definições do teclado"
+
+#: ../panel-plugin/xkb.desktop.in.h:2
+msgid "Keyboard layouts setup and switch plugin"
+msgstr "\"Plug-in\" de configuração do esquema do teclado"
